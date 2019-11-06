@@ -1,4 +1,4 @@
-package testMappingHibernate.entity;
+package testMappingHibernate.entity.annatationmapping;
 
 import jdk.nashorn.internal.objects.annotations.Getter;
 import jdk.nashorn.internal.objects.annotations.Setter;

@@ -1,0 +1,15 @@
+<hibernate-mapping package = "testMappingHibernate.entity.xmlmapping">
+    <class name="Address" table="ADDRESSES" >
+        <id name="id" type="java.lang.Long" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="city" type="java.lang.String" column="CITY"/>
+        <property name="street" type="java.lang.String" column="STREET"/>
+        <set name="col" table="Employees" inverse="true" lazy="false">
+            <key>
+                <column name="ADDRESS"/>
+            </key>
+            <one-to-many class="testMappingHibernate.entity.xmlmapping.Employee"/>
+        </set>
+    </class>
+</hibernate-mapping>

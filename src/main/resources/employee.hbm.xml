@@ -1,0 +1,12 @@
+<hibernate-mapping package="testMappingHibernate.entity.xmlmapping">
+    <class name="Employee" abstract="true" table="EMPLOYEES">
+        <id name="id" type="java.lang.Long" column="ID">
+            <generator class="native"/>
+        </id>
+        <property name="name" type="java.lang.String" column="NAME"/>
+        <property name="lastName" type="java.lang.String" column="LAST_NAME"/>
+        <many-to-one name="address" class="testMappingHibernate.entity.xmlmapping.Address">
+            <column name="ADDRESS"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

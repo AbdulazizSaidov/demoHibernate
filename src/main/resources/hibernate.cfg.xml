@@ -15,6 +15,9 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
-        <mapping class="testMappingHibernate.entity.Person"></mapping>
+        <mapping class="testMappingHibernate.entity.annatationmapping.Person"></mapping>
+
+        <mapping resource="employee.hbm.xml"/>
+        <mapping resource="address.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
