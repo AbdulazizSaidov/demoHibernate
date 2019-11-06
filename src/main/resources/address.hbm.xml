@@ -1,7 +1,9 @@
 <hibernate-mapping package = "testMappingHibernate.entity.xmlmapping">
     <class name="Address" table="ADDRESSES" >
         <id name="id" type="java.lang.Long" column="id">
-            <generator class="native"/>
+            <generator class="sequence">
+                <param name="sequence">address_seq</param>
+            </generator>
         </id>
         <property name="city" type="java.lang.String" column="CITY"/>
         <property name="street" type="java.lang.String" column="STREET"/>

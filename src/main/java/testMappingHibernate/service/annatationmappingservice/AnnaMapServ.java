@@ -25,8 +25,6 @@ public class AnnaMapServ {
       }
   }
 
-
-
     public static List<Person> persons(){
         Session session = sessionFactory.openSession();
         session.beginTransaction();
@@ -42,4 +40,18 @@ public class AnnaMapServ {
         query.setParameter("id", id);
         return (Person) query.getSingleResult();
     }
+
+    public static Long savePerson() {
+        Person person  = new Person();
+        person.setFirstName("Jon");
+        person.setAge(25);
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.save(person);
+        session.getTransaction().commit();
+        session.close();
+        return person.getId();
+    }
+
+
 }

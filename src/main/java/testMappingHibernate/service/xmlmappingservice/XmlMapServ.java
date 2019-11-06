@@ -20,7 +20,7 @@ public class XmlMapServ {
         }
     }
 
-    public static void saveEmployee(){
+    public static Employee saveEmployee(){
         Employee employee = new Employee();
         Address address = new Address();
 
@@ -37,6 +37,8 @@ public class XmlMapServ {
         session.save(address);
         session.getTransaction().commit();
         session.close();
+
+        return employee;
 
     }
 }
